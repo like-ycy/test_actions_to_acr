@@ -1,0 +1,16 @@
+name: Docker Image CI 
+
+on: [push] 
+
+jobs:
+
+  build: 
+    runs-on: ubuntu-latest 
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image 
+      run: |
+        docker login --username=${{ secrets.ACR_USERNAME }} registry.cn-beijing.aliyuncs.com --password=${{ secrets.ACR_PASSWORD }}
+        docker build -t xingwen:latest . 
+        docker tag xingwen registry.ap-northeast-1.aliyuncs.com/example/xingwen
+        docker push registry.ap-northeast-1.aliyuncs.com/example/xingwen:latest  
