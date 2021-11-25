@@ -2,5 +2,5 @@ FROM ubuntu:latest
 
 WORKDIR /opt
 
-RUN apt install nginx
+RUN echo "welcome come to actions"
 

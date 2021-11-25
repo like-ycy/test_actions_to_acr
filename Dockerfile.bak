@@ -2,4 +2,5 @@ FROM ubuntu:latest
 
 WORKDIR /opt
 
-RUN mkdir test
+RUN apt install nginx
+
