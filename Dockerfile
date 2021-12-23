@@ -5,6 +5,9 @@ LABEL Author="wang"
 ENV PYTHONUNBUFFERED 1
 
 COPY ./exam /exam
+COPY ./sources/list /etc/apt/sources/list
+
+RUN apt update && apt install gcc make -y
 
 WORKDIR /exam
 
