@@ -1,8 +1,9 @@
-from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
+
 from .models import User, Department
 
 
-class UserModelSerializer(serializers.ModelSerializer):
+class UserModelSerializer(ModelSerializer):
     """用户序列化器"""
 
     class Meta:
@@ -12,12 +13,11 @@ class UserModelSerializer(serializers.ModelSerializer):
         fields = ("id", "username", "mobile", "department")
 
 
-class DepartmentModelSerializer(serializers.ModelSerializer):
+class DepartmentModelSerializer(ModelSerializer):
     """部门序列化器"""
-    department = UserModelSerializer(many=True)
 
     class Meta:
         # 指定序列化的模型
         model = Department
         # 指定序列化的字段
-        fields = ("id", "name", "leader", "num", "addr", "phone", "department")
+        fields = ("id", "name", "leader", "num", "addr", "phone")

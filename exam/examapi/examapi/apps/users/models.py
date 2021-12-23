@@ -19,7 +19,7 @@ class Department(BaseModel):
 class User(AbstractUser):
     """用户表"""
     mobile = models.CharField(max_length=15, verbose_name='手机号码')
-    department = models.ForeignKey(Department, on_delete=models.DO_NOTHING, verbose_name='所属部门',
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, verbose_name='所属部门',
                                    db_constraint=False, related_name='department', null=True,
                                    blank=True)
 

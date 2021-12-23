@@ -1,15 +1,16 @@
 asgiref==3.4.1
 backports.zoneinfo==0.2.1
 certifi==2021.10.8
-cffi @ file:///home/conda/feedstock_root/build_artifacts/cffi_1636046063618/work
-cryptography @ file:///tmp/build/80754af9/cryptography_1639400846433/work
 Django==3.2
 djangorestframework==3.13.1
 djangorestframework-jwt==1.11.0
 freeze==0.0.1
-pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
 PyJWT==1.7.1
-PyMySQL @ file:///tmp/build/80754af9/pymysql_1610482871788/work
 pytz==2021.3
 sqlparse==0.4.2
-uWSGI @ file:///home/conda/feedstock_root/build_artifacts/uwsgi_1640027738175/work
+PyMySQL==1.0.2
+uWSGI==2.0.20
+cffi==1.15.0
+cryptography==36.0.0
+pycparser==2.21
+
