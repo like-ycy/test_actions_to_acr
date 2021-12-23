@@ -12,5 +12,5 @@ jobs:
       run: |
         docker login --username=${{ secrets.ACR_USERNAME }} registry.cn-beijing.aliyuncs.com --password=${{ secrets.ACR_PASSWORD }}
         docker build -t gayking:latest . 
-        docker tag gayking registry.cn-beijing.aliyuncs.com/test_actions/acr_test:latest
-        docker push registry.cn-beijing.aliyuncs.com/test_actions/acr_test:latest
+        docker tag gayking registry.cn-beijing.aliyuncs.com/test_actions/uwsgi:latest
+        docker push registry.cn-beijing.aliyuncs.com/test_actions/uwsgi:latest

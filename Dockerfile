@@ -1,6 +1,15 @@
-FROM ubuntu:latest
+FROM python:3.10
 
-WORKDIR /opt
+LABEL Author="wang"
 
-RUN echo "welcome come to actions"
+ENV PYTHONUNBUFFERED 1
 
+COPY ./exam /exam
+
+WORKDIR /exam
+
+RUN pip install -r requirements.txt
+
+EXPOSE 8000
+
+CMD [ "uuwsgi", "--ini", "/exam/uwsgi.ini" ]
