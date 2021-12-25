@@ -15,4 +15,4 @@ RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
-CMD [ "uuwsgi", "--ini", "/exam/uwsgi.ini" ]
+CMD [ "uwsgi", "--ini", "/exam/uwsgi.ini" ]
